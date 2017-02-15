@@ -1,0 +1,23 @@
+
+<div class="container">
+
+  <div
+    class="listing-reviews-container"
+    ng-if="$ctrl.listing">
+
+    <lp-listing-item
+      title="$ctrl.listing.name"
+      address="$ctrl.listing.public_address"
+      img="$ctrl.listing.picture_url">
+    </lp-listing-item>
+
+    <div class="reviews list-group">
+      <lp-review-item
+        ng-repeat="review in $ctrl.reviews track by review.id"
+        author="review.author.first_name"
+        comment="review.comments">
+      </lp-review-item>
+    </div>
+
+  </div>
+</div>

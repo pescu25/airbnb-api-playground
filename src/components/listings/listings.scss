@@ -1,0 +1,17 @@
+
+.dropdown {
+  margin: 20px 0;
+
+  .title {
+    margin: 0 5px;
+  }
+}
+
+.listings > li > a {
+  outline: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

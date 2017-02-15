@@ -1,0 +1,23 @@
+
+@import '../../styles/colors';
+
+.listing-item {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  background: $item-bg-color;
+
+  .media-heading {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .media-body {
+    vertical-align: middle;
+  }
+
+  img {
+    max-width: 120px;
+    max-height: 120px;
+  }
+}

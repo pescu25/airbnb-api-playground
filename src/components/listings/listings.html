@@ -1,0 +1,31 @@
+
+<div class="container listings-container">
+
+  <h1 class="title">Welcome to Airbnb API playground !</h1>
+
+  <div class="row dropdown">
+    <span class="title">  please select a  city </span>
+    <select
+      ng-model="$ctrl.selectedCity"
+      ng-options="city for city in $ctrl.cities"
+      ng-change="$ctrl.getCityListings()">
+    </select>
+  </div>
+
+  <div class="row">
+    <ul class="listings">
+
+        <li ng-repeat="listingData in $ctrl.listingsCache[$ctrl.selectedCity] track by listingData.listing.id">
+          <a ui-sref="listings-reviews({id : listingData.listing.id})">
+            <lp-listing-item
+              title="listingData.listing.name"
+              address="listingData.listing.public_address"
+              img="listingData.listing.picture_url">
+            </lp-listing-item>
+          </a>
+        </li>
+
+    </ul>
+  </div>
+
+</div>
